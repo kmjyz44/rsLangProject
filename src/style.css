@@ -58,6 +58,7 @@
   .menu-main li {display: block;}
   }
   .content {
+    background: #655a7b;
     box-shadow: none;
     display: inline-block;
     position: absolute;
@@ -67,7 +68,112 @@
    background-image: url(./img/its_time_to_learn_english-1024x679.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-
-
   }
+  h1{
+    color: #dccef8;
+    font-size: 1.4em;
+  }
+  .contentText1{
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 26%;
+    margin-left: 2%;
+    margin-top: 11%;
+    border: thick double #6d7ed6;
+    border-radius: 45%;
+    text-align: center;
+    align-items: center;
+padding-top: 1%;
+z-index: 1;
+transform: rotate(-1deg);
+
+    background:  #655a8b;
+  }
+  .contentText1:hover{
+    background:  #655a0b;
+}
+  .contentText2{
+    position: absolute;
+    display: block;
+    position: absolute;
+    width: 12%;
+    height: 19%;
+    margin-left: 2%;
+    margin-top: -6%;
+    border: thick double #6d7ed6;
+    border-radius: 45%;
+    text-align: center;
+    align-items: center;
+padding-top: 1%;
+z-index: 2;
+transform: rotate(-0deg);
+    background:  #9ce00b;
+  }
+  .contentText2:hover{
+    background:  #9ce09b;
+  }
+  .contentText3{
+    display: block;
+    width: 12%;
+    height: 19%;
+    margin-left: 78%;
+    margin-top: 1%;
+    border: thick double #6d7ed6;
+    border-radius: 45%;
+    text-align: center;
+    align-items: center;
+padding-top: 1%;
+z-index: 3;
+transform: rotate(-2deg);
+    background:  #f90909;
+  }
+  .contentText3:hover{
+    background:  #f90989;
+  }
+  .contentText4{
+    display: block;
+    width: 20%;
+    height: 26%;
+    margin-left: 75%;
+    margin-top: 2%;
+    border: thick double #6d7ed6;
+    border-radius: 45%;
+    text-align: center;
+    align-items: center;
+padding-top: 2%;
+z-index: 4;
+transform: rotate(2deg);
+    background:  #09c162;
+  }
+  .contentText4:hover{
+    background:  #09c192;
+  }
+  .contentText5{
+    display: block;
+    width: 20%;
+    height: 24%;
+    margin-left: 73%;
+    margin-top: 2%;
+    border: thick double #6d7ed6;
+    border-radius: 45%;
+    text-align: center;
+    align-items: center;
+padding-top: 3%;
+z-index: 5;
+transform: rotate(-1deg);
+    background:  #d97154;
+  }
+  .contentText5:hover{
+    background:  #d97190;
+  }
+  .contentText6{
+    display: inline-block;
+    text-align: center;
+    display: block;
+  }
+   
   
+  .contentText6 h1{
+    color: #2a096c;
+}
