@@ -261,23 +261,24 @@ transform: rotate(-1deg);
     justify-content: space-between;
 }
 
-.footText a{
+.footText a {
   letter-spacing: 2px;
   font-size: 10px;
   color: #2a096c;
   text-decoration: none;
 }
 .card_book{
-  width: 10%;
-  height: 8%;
-  padding: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  border: thick double #e3e4eb;
-  border-radius: 10%;
-  background: #09c162;
-}
-.card_book h2{
-  color: black;
-  font-size: 10px;
-}
+    width: 7%;
+    height: 2%;
+    padding: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: thick double #e3e4eb;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255,0.760);
+    
+  }
+  .card_book h2{
+    color: #2a096c;;
+    font-size: 14px;
+  }
