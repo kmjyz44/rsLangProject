@@ -61,31 +61,38 @@
     background: #655a7b;
     box-shadow: none;
     display: inline-block;
-    position: absolute;
     align-items: center;
     width: 100%;
     height: 100%;
    background-image: url(./img/its_time_to_learn_english-1024x679.jpg);
   background-repeat: no-repeat;
   background-position: top center;
+ 
   }
-  h1{
+ h1{
+    color: #efeef2;
+ }
+
+  h2{
     color: #dccef8;
     font-size: 1.4em;
   }
+  span{
+    color: white;
+  }
   .contentText1{
-    position: absolute;
+    position: relative;
     display: block;
     width: 20%;
     height: 26%;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-top: 11%;
     border: thick double #6d7ed6;
     border-radius: 45%;
     text-align: center;
     align-items: center;
 padding-top: 1%;
-z-index: 1;
+z-index: 2;
 transform: rotate(-1deg);
 
     background:  #655a8b;
@@ -99,7 +106,7 @@ transform: rotate(-1deg);
     position: absolute;
     width: 12%;
     height: 19%;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-top: -6%;
     border: thick double #6d7ed6;
     border-radius: 45%;
@@ -107,18 +114,19 @@ transform: rotate(-1deg);
     align-items: center;
 padding-top: 1%;
 z-index: 2;
-transform: rotate(-0deg);
+transform: rotate(-2deg);
     background:  #9ce00b;
   }
   .contentText2:hover{
     background:  #9ce09b;
   }
   .contentText3{
+    position: relative;
     display: block;
     width: 12%;
     height: 19%;
     margin-left: 78%;
-    margin-top: 1%;
+    margin-top: 0%;
     border: thick double #6d7ed6;
     border-radius: 45%;
     text-align: center;
@@ -133,15 +141,16 @@ transform: rotate(-2deg);
   }
   .contentText4{
     display: block;
+    position: relative;
     width: 20%;
     height: 26%;
     margin-left: 75%;
-    margin-top: 2%;
+    margin-top: 1%;
     border: thick double #6d7ed6;
     border-radius: 45%;
     text-align: center;
     align-items: center;
-padding-top: 2%;
+padding-top: 0%;
 z-index: 4;
 transform: rotate(2deg);
     background:  #09c162;
@@ -174,6 +183,36 @@ transform: rotate(-1deg);
   }
    
   
-  .contentText6 h1{
+  .contentText6 h2{
     color: #2a096c;
+}
+.contentCard{
+    width: 100%;
+    height: 100%;
+    background: #655a7b;
+}
+
+.title {
+    display: block;
+    padding-top: 2%;
+    text-align: center;
+
+}
+.card1{
+    display: block;
+    width: 20%;
+    height: 35%;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: thick double #e3e4eb;
+    border-radius: 10%;
+}
+.card1 img{
+    border-radius: 10%;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
 }
