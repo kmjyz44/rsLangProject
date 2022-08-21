@@ -268,7 +268,7 @@ transform: rotate(-1deg);
   text-decoration: none;
 }
 .card_book{
-    width: 7%;
+    width: 9%;
     height: 2%;
     padding: 1%;
     margin-left: 2%;
@@ -280,5 +280,5 @@ transform: rotate(-1deg);
   }
   .card_book h2{
     color: #2a096c;;
-    font-size: 14px;
+    font-size: 12px;
   }
