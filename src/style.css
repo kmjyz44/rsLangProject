@@ -225,6 +225,7 @@ transform: rotate(-1deg);
     width: 100%;
     height: 100%;
     background: #655a7b;
+    padding-bottom: 5%;
 
 }
 .developers h1{
@@ -232,18 +233,20 @@ transform: rotate(-1deg);
     text-align: center;
 }
 .card2{
-    display: block;
-    width: 20%;
-    height: 5%;
+    
+    width: 10%;
+    height: 8%;
     padding: 1%;
-   
     margin-left: 2%;
     margin-right: 2%;
     border: thick double #e3e4eb;
     border-radius: 10%;
 }
 .card2 img{
+    display: block;
     border-radius: 100%;
+   padding : 2%;
+   margin: 2%;
 }
 .footerTxt span{
     letter-spacing: 2px;
