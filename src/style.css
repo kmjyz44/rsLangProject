@@ -403,6 +403,10 @@ transform: rotate(-1deg);
    font-size: 40px;
   }
 
-
-  
+  .prev{
+  cursor: pointer;
+  }
+  .next{
+    cursor: pointer;
+  }
   
