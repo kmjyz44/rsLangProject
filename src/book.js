@@ -1,7 +1,8 @@
-export async function getWord (n){
+export async function getWord (n,i){
     const word = document.querySelector('.word');
+    console.log(n+'___'+i)
     let out='';
-   await fetch('https://leng-app.herokuapp.com/words?page= '+n+'&group=0')
+   await fetch('https://leng-app.herokuapp.com/words?page= '+i+'&group='+n+'')
     .then((data) => {
        
       return data.json();
@@ -10,7 +11,7 @@ export async function getWord (n){
     data.forEach(element => {
      out += '<li class = "li_case" data = "'+element.word+'">' +element.word+ '<br>'+ element.wordTranslate+'</li>';
    word.innerHTML = out;
-        console.log(element); 
+        //console.log(element); 
     });
   
   }) 
