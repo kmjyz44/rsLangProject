@@ -12,6 +12,7 @@ prev.addEventListener('click', hide_number);
 const namber_page = document.querySelector('.namber_page');
 let n =0;
  let i = 0;
+ let a ='travel'
 getWord(n,i);
 wrapper_book.addEventListener('click',function (event)  {
   event.stopPropagation(true);
@@ -37,9 +38,14 @@ if(i !== null && n !== null){
 word.addEventListener('click', function(event){
 //document.addEventListener('load', (event) => {
   const li_case = document.querySelectorAll('.li_case');
-  li_case.forEach(element => {
-    element.classList.remove('.li_case_active');
+a = event.target.getAttribute('data');
+if(event.target.getAttribute('data') !==null &i !== null && n !== null){
+getWord(n,i,a);
+li_case.forEach(element => {
+  element.classList.remove('.li_case_active');
 })
 event.target.classList.add('.li_case_active');
+}
 })
+
 //})

@@ -317,9 +317,12 @@ transform: rotate(-1deg);
      font-size: 1em;
   }
   .li_case:hover{
+    
+    cursor: pointer;
+  }
+  .li_case_active{
     background-color: rgba(224, 217, 217, 0.76);;
     box-shadow: 8px 8px 1px 1px rgba(248, 245, 245, 0.76);
-    cursor: pointer;
   }
 
   .grid_container{
