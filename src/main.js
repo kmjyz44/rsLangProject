@@ -1,14 +1,14 @@
 import { getWord} from "./book.js";
 import {hide_number} from './book.js'
 
+
+const word = document.querySelector('.word');
 const wrapper_book = document.querySelector('.wrapper_book');
 const card_book = document.querySelectorAll('.card_book')
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next'); 
 next.addEventListener('click', hide_number);
 prev.addEventListener('click', hide_number);
-const pagination = document.querySelector('.pagination');
-const pagination_active = document.querySelector('.pagination_active');
 const namber_page = document.querySelector('.namber_page');
 let n =0;
  let i = 0;
@@ -31,9 +31,15 @@ i = event.target.getAttribute('data');
 
 if(i !== null && n !== null){
   getWord(n,i);
-
 }
 })
 })
-
-
+word.addEventListener('click', function(event){
+//document.addEventListener('load', (event) => {
+  const li_case = document.querySelectorAll('.li_case');
+  li_case.forEach(element => {
+    element.classList.remove('.li_case_active');
+})
+event.target.classList.add('.li_case_active');
+})
+//})

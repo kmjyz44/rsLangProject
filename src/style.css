@@ -314,12 +314,14 @@ transform: rotate(-1deg);
     border-radius: 5%;
     background-color: rgba(255, 255, 255,0.760);
      list-style-type: none;
+     font-size: 1em;
   }
   .li_case:hover{
     background-color: rgba(224, 217, 217, 0.76);;
     box-shadow: 8px 8px 1px 1px rgba(248, 245, 245, 0.76);
     cursor: pointer;
   }
+
   .grid_container{
     display: flex;
     justify-content: space-between;
