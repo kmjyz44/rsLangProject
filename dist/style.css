@@ -321,6 +321,10 @@ transform: rotate(-1deg);
     box-shadow: 8px 8px 1px 1px rgba(248, 245, 245, 0.76);
     cursor: pointer;
   }
+  .li_case_active{
+    background-color: rgba(224, 217, 217, 0.76);;
+    box-shadow: 8px 8px 1px 1px rgba(248, 245, 245, 0.76);
+  }
 
   .grid_container{
     display: flex;
@@ -330,8 +334,6 @@ transform: rotate(-1deg);
   }
   .word_card{
     width: 40%;
-    background: #09c162;
-    
   }
   
   .namber_page{
@@ -416,4 +418,15 @@ transform: rotate(-1deg);
   .next{
     cursor: pointer;
   }
+  .voice_div{
+    display: flex;
+    justify-content: space-between;
+  }
   
+  .voice_button{
+    cursor: pointer;
+  }
+  #myAudio{
+  width: 30%;
+    
+  } 

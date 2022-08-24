@@ -10,10 +10,11 @@ const next = document.querySelector('.next');
 next.addEventListener('click', hide_number);
 prev.addEventListener('click', hide_number);
 const namber_page = document.querySelector('.namber_page');
+
 let n =0;
  let i = 0;
  let a ='travel'
-getWord(n,i,a);
+
 wrapper_book.addEventListener('click',function (event)  {
   event.stopPropagation(true);
   card_book.forEach(element => {
@@ -41,13 +42,16 @@ word.addEventListener('click', function(event){
 a = event.target.getAttribute('data');
 if(event.target.getAttribute('data') !==null &i !== null && n !== null){
   
+
+// li_case.forEach(element => {
+//   element.classList.remove('.li_case_active');
+// })
+// event.target.classList.add('.li_case_active');
 getWord(n,i,a);
-li_case.forEach(element => {
-  element.classList.remove('.li_case_active');
-})
-event.target.classList.add('.li_case_active');
 }
 })
-const voice_button = document.querySelector('.voice_button');
-console.log(voice_button)
-//})
+async function getelementcard(){
+await getWord(n,i,a);
+
+}
+getelementcard();
