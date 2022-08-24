@@ -13,7 +13,7 @@ const namber_page = document.querySelector('.namber_page');
 let n =0;
  let i = 0;
  let a ='travel'
-getWord(n,i);
+getWord(n,i,a);
 wrapper_book.addEventListener('click',function (event)  {
   event.stopPropagation(true);
   card_book.forEach(element => {
@@ -31,7 +31,7 @@ namber_page.addEventListener('click',function (event)  {
 i = event.target.getAttribute('data');
 
 if(i !== null && n !== null){
-  getWord(n,i);
+  getWord(n,i,0);
 }
 })
 })
@@ -40,6 +40,7 @@ word.addEventListener('click', function(event){
   const li_case = document.querySelectorAll('.li_case');
 a = event.target.getAttribute('data');
 if(event.target.getAttribute('data') !==null &i !== null && n !== null){
+  
 getWord(n,i,a);
 li_case.forEach(element => {
   element.classList.remove('.li_case_active');
@@ -47,5 +48,6 @@ li_case.forEach(element => {
 event.target.classList.add('.li_case_active');
 }
 })
-
+const voice_button = document.querySelector('.voice_button');
+console.log(voice_button)
 //})

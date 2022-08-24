@@ -333,8 +333,6 @@ transform: rotate(-1deg);
   }
   .word_card{
     width: 40%;
-    background: #09c162;
-    
   }
   
   .namber_page{
@@ -419,4 +417,13 @@ transform: rotate(-1deg);
   .next{
     cursor: pointer;
   }
-  
+  .voice_div{
+    display: flex;
+  }
+  /* .img_word{
+    
+    height: 200px;
+  }  */
+  .voice_button{
+    cursor: pointer;
+  }
