@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>entrance</title>
+    <title>Document</title>
 </head>
 <link rel="stylesheet" href="./style.css">
 <body class="entrance">
-   
-    <form >
-        <input checked="" id="signin" name="action" type="radio" value="signin">
-        <label for="signin">Sign in</label>
-        <input id="signup" name="action" type="radio" value="signup">
-        <label for="signup">Sign up</label>
-        <input id="reset" name="action" type="radio" value="reset">
-        <label for="reset">Reset</label>
-        <div id="wrapper_entrance">
-          <div id="arrow"></div>
-          <input id="email" placeholder="Email" type="text">
-          <input id="pass" placeholder="Password" type="password">
-          <input id="repass" placeholder="Repeat password" type="password">
-        </div>
-        <button type="submit">
-          <span>
-            Reset password
-            <br>
-            Sign in
-            <br>
-            Sign up
-          </span>
-        </button>
-      </form>
-      <div id="hint">Click on the tabs</div>
+  <div class="heder">
+    <nav class="top-menu" id="top-menu">
+        <ul class="menu-main">
+          <li class="left-item"><a href="./index.html">Главная</a></li>
+          <li class="left-item"><a href="./book.html">Учебник</a></li>
+          <li class="left-item"><a href="./entrance.html">Аудиовызов</a></li>
+          <li class="right-item"><a href="">Спринт</a></li>
+          <li class="right-item"><a href="">Статистика</a></li>
+          <li class="right-item"><a href="./entrance.html">Вход</a></li>
+      </ul>
+        <a class="navbar-logo" href=""><img src="./img/the-language-village.svg"></a>
+      </nav>
+       
+</div>
+      <form id="login">
+        <h1>Вход</h1>
+        <fieldset id="inputs">
+            <input id="username" placeholder="Логин" autofocus="" required="" type="text">   
+            <input id="password" placeholder="Пароль" required="" type="password">
+        </fieldset>
+        <fieldset id="actions">
+            <input id="submit" value="Войти" type="submit">
+            <a href="">Забыли пароль?</a><a href="./registerform.html">Регистрация</a>
+        </fieldset>
+    </form>
+      <!-- <script src="./book.js" type="module"></script> -->
       
-      <script type="text/javascript">
-          
-      </script>
+<!-- <script src="./main.js" type="module"></script> -->
 </body>
 </html>

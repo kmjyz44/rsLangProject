@@ -1,4 +1,5 @@
-export async function getWord (n,i,a='travel'){
+ async function getWord (n,i,a='travel'){
+  
     const word = document.querySelector('.word');
     const word_card = document.querySelector('.word_card');
     let out='';
@@ -11,7 +12,8 @@ export async function getWord (n,i,a='travel'){
   .then(data => {
     data.forEach(element => {
      out += '<li class = "li_case" data = "'+element.word+'">' +element.word+ '<br>'+ element.wordTranslate+'</li>';
-   word.innerHTML = out;
+   
+     word.innerHTML = out;
    //console.log (element);
    if(a == element.word){  
     out_word += '<img class = "img_word" src="https://leng-app.herokuapp.com/'+element.image+'"); alt="word"></img>'
@@ -22,13 +24,7 @@ export async function getWord (n,i,a='travel'){
    
     out_word += '<audio id="myAudio" controls>'+
   '<source src="https://leng-app.herokuapp.com/'+element.audio+'" type="audio/mpeg">'+
-  '</audio>' // out_word += '<button class = "voice_button1">'+'<?xml   version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" width ="30px" xml:space="preserve">'+
-    // '<path   fill="#81D4FA"  d="M28,7.1v2c7.3,1,13,7.3,13,14.9s-5.7,13.9-13,14.9v2c8.4-1,15-8.2,15-16.9S36.4,8.1,28,7.1z"/>'+
-    // '<path fill="#546E7A"  d="M14,32H7c-1.1,0-2-0.9-2-2V18c0-1.1,0.9-2,2-2h7V32z"/>'+
-    // '<polygon  fill="#78909C"  points="26,42 14,32 14,16 26,6 "/>'+
-    // '<path  fill="#03A9F4" d="M28,17.3v2.1c1.8,0.8,3,2.5,3,4.6s-1.2,3.8-3,4.6v2.1c2.9-0.9,5-3.5,5-6.7S30.9,18.2,28,17.3z"/>'+
-    // '<path  fill="#4FC3F7"  d="M28,12.2v2c4.6,0.9,8,5,8,9.8s-3.4,8.9-8,9.8v2c5.7-1,10-5.9,10-11.8S33.7,13.1,28,12.2z"/>'+
-    // '</svg>'+'</button>'
+  '</audio>' 
     out_word += '</div>'
     out_word += '<h3>Значение</h3>'
     out_word += '<h3>'+element.textMeaning+'</h3>'
@@ -44,11 +40,13 @@ export async function getWord (n,i,a='travel'){
   }) 
   }
   
-const pagination = document.querySelectorAll('.pagination');
-pagination[0].classList.add('pagination_active');
-
+  const pagination = document.querySelectorAll('.pagination');
+  if(pagination[0] !== undefined){
+  pagination[0].classList.add('pagination_active');
+  }
 export function hide_number(){
-  console.log(1);
+  
+
    if(pagination[0].classList.contains('pagination_active')){
     pagination[0].classList.remove('pagination_active');
     pagination[2].classList.remove('pagination_active');
@@ -68,5 +66,57 @@ export function hide_number(){
     pagination[0].classList.add('pagination_active');
     
    }
-  }
   
+}
+
+
+const word = document.querySelector('.word');
+const wrapper_book = document.querySelector('.wrapper_book');
+const card_book = document.querySelectorAll('.card_book')
+
+const namber_page = document.querySelector('.namber_page');
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next'); 
+next.addEventListener('click', hide_number);
+prev.addEventListener('click', hide_number);
+
+
+let n = 0;
+ let i = 0;
+ let a ='travel'
+ getWord(n,i,a);
+if(wrapper_book){}
+wrapper_book.addEventListener('click',function (event)  {
+  event.stopPropagation(true);
+  card_book.forEach(element => {
+    element.classList.remove('book_active')  
+   });
+   if(event.target.getAttribute('data') !==null){
+  event.target.classList.add('book_active');
+   }
+ n = event.target.getAttribute('data');
+if(n !== null){
+  getWord(n,0);
+}
+namber_page.addEventListener('click',function (event)  {
+  event.stopPropagation(true);
+i = event.target.getAttribute('data');
+
+if(i !== null && n !== null){
+  getWord(n,i,0);
+}
+})
+})
+word.addEventListener('click', function(event){
+
+  const li_case = document.querySelectorAll('.li_case');
+a = event.target.getAttribute('data');
+if(event.target.getAttribute('data') !==null &i !== null && n !== null){
+  
+
+getWord(n,i,a);
+}
+})
+
+  export {getWord}
