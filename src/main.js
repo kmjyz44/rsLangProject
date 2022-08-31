@@ -1,4 +1,4 @@
 
-import {book} from "./book.js";
- import {registr} from './registr.js'
+import {} from "./book.js";
+ import {} from './registr.js'
 
