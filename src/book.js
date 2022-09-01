@@ -1,3 +1,5 @@
+import {getMenu} from "./menu.js"
+getMenu();
  async function getWord (n,i,a='travel'){
   
     const word = document.querySelector('.word');

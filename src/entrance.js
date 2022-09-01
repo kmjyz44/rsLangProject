@@ -1,9 +1,10 @@
-
+import {getMenu} from "./menu.js"
+ getMenu();
 const login = document.querySelector("#login");
 const username = document.getElementById('#username');
 const passlog = document.querySelector('#passlog');
 const submit_log = document.querySelector('#submit_log');
-
+const log_in = document.querySelector('.log_in');
 
 async function loginUser () {
    
@@ -22,6 +23,7 @@ async function loginUser () {
     else{
       alert(`Добро пожаловать ${login.username.value}`)
       document.location.href = "./index.html"
+      //getMenu(login.username.value);
     }
     const content = await rawResponse.json();
    
