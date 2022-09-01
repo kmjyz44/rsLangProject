@@ -19,6 +19,10 @@ async function loginUser () {
     if(rawResponse.status !=200 ){
         alert('Введен не правильный логин или пароль!')
     }
+    else{
+      alert(`Добро пожаловать ${login.username.value}`)
+      document.location.href = "./index.html"
+    }
     const content = await rawResponse.json();
    
     console.log(content);
