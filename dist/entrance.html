@@ -22,19 +22,19 @@
       </nav>
        
 </div>
-      <form id="login">
+      <form id="login" name = "login" onsubmit="return false">
         <h1>Вход</h1>
         <fieldset id="inputs">
             <input id="username" placeholder="Логин" autofocus="" required="" type="text">   
-            <input id="password" placeholder="Пароль" required="" type="password">
+            <input id="passlog" placeholder="Пароль" required="" type="password">
         </fieldset>
         <fieldset id="actions">
-            <input id="submit" value="Войти" type="submit">
+            <input id="submit_log" class="submit_log" value="Войти" type="submit">
             <a href="">Забыли пароль?</a><a href="./registerform.html">Регистрация</a>
         </fieldset>
     </form>
       <!-- <script src="./book.js" type="module"></script> -->
       
-<!-- <script src="./main.js" type="module"></script> -->
+<script src="./entrance.js" type="module"></script>
 </body>
 </html>
