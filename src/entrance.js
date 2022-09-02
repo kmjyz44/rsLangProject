@@ -1,5 +1,6 @@
 import {getMenu} from "./menu.js"
- getMenu();
+ 
+getMenu();
 const login = document.querySelector("#login");
 const username = document.getElementById('#username');
 const passlog = document.querySelector('#passlog');
@@ -17,14 +18,22 @@ async function loginUser () {
       body: JSON.stringify({"email": login.username.value, "password": login.passlog.value })
       
     });
+    
     if(rawResponse.status !=200 ){
         alert('Введен не правильный логин или пароль!')
+         document.cookie = "usename = guest"
     }
     else{
       alert(`Добро пожаловать ${login.username.value}`)
-      document.location.href = "./index.html"
-      //getMenu(login.username.value);
+      
+      document.location.href = "./index.html";
+      let d = new Date();
+      d.setTime(d.getTime()+(24*60*60*1000));
+      let expires = d.toUTCString();
+      document.cookie = `usename = ${login.username.value}; expires=${expires};path=/`;
+      
     }
+   
     const content = await rawResponse.json();
    
     console.log(content);
@@ -76,7 +85,5 @@ async function loginUser () {
     console.log(content);
   };
   
-  
-  
-  
  login.submit_log.addEventListener('click', loginUser);
+ 

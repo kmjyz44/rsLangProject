@@ -1,7 +1,7 @@
 
 export function getMenu (login = 'Вход'){
   const menu = document.querySelector('.menu-main');
-  menu.innerHTML = '<li class="left-item"><a href="">Главная</a></li>'+
+  menu.innerHTML = '<li class="left-item"><a href="./index.html">Главная</a></li>'+
   '<li class="left-item"><a href="./book.html">Учебник</a></li>'+
   '<li class="left-item"><a href="">Аудиовызов</a></li>'+
   '<li class="right-item"><a href="">Спринт</a></li>'+
