@@ -14,10 +14,10 @@ export  function getMenu (){
   menu.innerHTML = '<li class="left-item"><a href="./index.html">Главная</a></li>'+
   '<li class="left-item"><a href="./book.html">Учебник</a></li>'+
   '<li class="left-item"><a href="">Аудиовызов</a></li>'+
-  '<li class="right-item"><a href="">Спринт</a></li>'+
+  '<li class="right-item"><a href="./sprint.html">Спринт</a></li>'+
   '<li class="right-item"><a href="">Статистика</a></li>'+
   '<li class="right-item log_in"><a href="./entrance.html">'+enter+'</a></li>'+
-  '<li class="right-item "><a href="./entrance.html">'+log_cooc+'</a></li>'    
+  '<li class="right-item class = "log_out"><a href="./entrance.html">'+log_cooc+'</a></li>'    
 }
 let cooc = document.cookie;
 function readCookie(name) {
@@ -28,8 +28,6 @@ function readCookie(name) {
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
+
     return null;
 }
-
-
-console.log(readCookie('usename'))
