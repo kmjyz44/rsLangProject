@@ -10,6 +10,8 @@ import {getMenu} from "./menu.js"
  let arrRus =[];
  let count = 1;
  let setinter;
+ const score_card = document.querySelector('.score_card');
+ const res_card = document.querySelector('.res_card');
  const score_sprint = document.querySelector('.score_sprint');
  const yes_but = document.querySelector('.yes_but');
  const no_but = document.querySelector('.no_but');
@@ -58,6 +60,8 @@ async function getWordSprint(i,n){
    }
    else{
       clearInterval(11);
+      res_card.style.display = 'block';
+      score_card.innerHTML = score;
    }
  }
 
@@ -100,5 +104,5 @@ function getRandomWord(){
   
    no_but.addEventListener('click', no_sprint);
    yes_but.addEventListener('click', yes_sprint);
-console.log(word_bad)
+
 start.addEventListener('click', timer);

@@ -774,3 +774,19 @@ color: red;
   color: #2a096c;
   
 }
+.res_card{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 350px;
+  width: 700px;
+  height: 230px;
+  margin: auto;
+  padding: auto;
+  align-items: center;
+background: #f3faf8;
+}
+.wrapper a{
+  margin-left: 20px;
+  
+}
