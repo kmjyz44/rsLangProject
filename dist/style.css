@@ -777,6 +777,7 @@ color: red;
 .res_card{
   display: none;
   position: absolute;
+  opacity: 0;
   z-index: 1;
   left: 350px;
   width: 700px;
