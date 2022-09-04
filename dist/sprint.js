@@ -60,7 +60,7 @@ async function getWordSprint(i,n){
    }
    else{
       clearInterval(11);
-      res_card.style.display = 'block';
+     // res_card.style.display = 'block';
       score_card.innerHTML = score;
    }
  }
