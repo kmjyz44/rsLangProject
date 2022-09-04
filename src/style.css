@@ -756,3 +756,15 @@ color: red;
 .yes{
   color: #1cbc11;
 }
+.start{
+  display: block;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  text-decoration: none;
+}
+.start:hover{
+ color: red;
+  cursor: pointer;
+  
+}
