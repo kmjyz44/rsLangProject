@@ -704,13 +704,13 @@ left: 330px;
   text-align: center;
   margin: auto;
   padding: auto;
-  width: 500px;
+  width: 5px;
   height: 10px;
   background: red;
 }
 .words_sprint{
   border: transparent red;
-  padding-top: 100px;
+  padding-top: 30px;
  
 }
 .butoon_sprint{
@@ -755,4 +755,22 @@ color: red;
 }
 .yes{
   color: #1cbc11;
+}
+.start{
+  display: block;
+  color: #1cbc11;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 30px;
+}
+.start:hover{
+ color: red;
+  cursor: pointer;
+  
+}
+.english_word{
+  color: #2a096c;
+  
 }

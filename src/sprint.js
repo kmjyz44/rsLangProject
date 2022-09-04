@@ -1,6 +1,8 @@
 import {getMenu} from "./menu.js"
  getMenu();
  
+ let word_bad = [];
+ let score = 1;
  let t;
  let i;
  let boolen;
@@ -8,6 +10,7 @@ import {getMenu} from "./menu.js"
  let arrRus =[];
  let count = 1;
  let setinter;
+ const score_sprint = document.querySelector('.score_sprint');
  const yes_but = document.querySelector('.yes_but');
  const no_but = document.querySelector('.no_but');
  const english_word = document.querySelector('.english_word');
@@ -40,16 +43,6 @@ async function getWordSprint(i,n){
    })
 })
 }
-   // for(let key of map.keys() ){
-   //    arrEng.push(key);
-   // }
-   // for(let value of map.values() ){
-   //    arrRus.push(value);
-   // }
-
-
-  
-
   async function timer (){
   await getWordSprint(1,0) ;
    getRandomWord();
@@ -76,32 +69,36 @@ function getRandomWord(){
    
 }
 
-
-
    function yes_sprint(){
       if(t === i){
-         alert('GOOD WORK')
+         score = score+10;
+         score_sprint.innerHTML= score;
+         
          return getRandomWord();
       }
       else
       {
          alert('Bad WORK');
+         word_bad.push(arrEng[t]);
          return getRandomWord();
       }
    }
    function no_sprint(){
       if(t === i){
          alert('Bad WORK');
+         word_bad.push(arrEng[t]);
         return getRandomWord();
       }
       else
       {
-         alert('GOOD WORK');
+         score++;
+         score_sprint.innerHTML= score;
+         
          return  getRandomWord();
       }
    }
   
    no_but.addEventListener('click', no_sprint);
    yes_but.addEventListener('click', yes_sprint);
-
+console.log(word_bad)
 start.addEventListener('click', timer);
