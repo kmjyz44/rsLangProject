@@ -1,8 +1,16 @@
 import {getMenu} from "./menu.js"
  getMenu();
- let arr=[];
+ 
+ let t;
+ let i;
+ let boolen;
+ let arrEng=[];
+ let arrRus =[];
  let count = 1;
  let setinter;
+ const yes_but = document.querySelector('.yes_but');
+ const no_but = document.querySelector('.no_but');
+ const english_word = document.querySelector('.english_word');
  const timer_collor = document.querySelector('.timer_collor');
  const norus = document.querySelector('.norus');
  const start = document.querySelector('.start');
@@ -20,30 +28,34 @@ import {getMenu} from "./menu.js"
   })
 
 async function getWordSprint(i,n){
-   let out='';
-   let out_word='';
+   
   await fetch('https://leng-app.herokuapp.com/words?page= '+i+'&group='+n+'')
    .then((data) => {
-      
      return data.json();
    })
  .then(data => {
    data.forEach(element => {
-    out = element.wordTranslate;
-    arr.push(out)
-    norus.innerHTML = out;
-   
+      arrEng.push(element.word);
+      arrRus.push(element.wordTranslate)
    })
-   console.log(arr[6])
-  })
+})
 }
+   // for(let key of map.keys() ){
+   //    arrEng.push(key);
+   // }
+   // for(let value of map.values() ){
+   //    arrRus.push(value);
+   // }
 
-  function timer (){
-   getWordSprint(1,0) ;
+
+  
+
+  async function timer (){
+  await getWordSprint(1,0) ;
+   getRandomWord();
+  
    setinter = setInterval(countSprint,1000);  
-   
 }
-
 
  function countSprint(){
    if(count<60){
@@ -55,5 +67,41 @@ async function getWordSprint(i,n){
       clearInterval(11);
    }
  }
+
+function getRandomWord(){
+   t = Math.floor(Math.random() * 20);
+   i = Math.floor(Math.random() * 20);
+   english_word.innerHTML=(arrEng[t]);
+   norus.innerHTML = (arrRus[i]);
+   
+}
+
+
+
+   function yes_sprint(){
+      if(t === i){
+         alert('GOOD WORK')
+         return getRandomWord();
+      }
+      else
+      {
+         alert('Bad WORK');
+         return getRandomWord();
+      }
+   }
+   function no_sprint(){
+      if(t === i){
+         alert('Bad WORK');
+        return getRandomWord();
+      }
+      else
+      {
+         alert('GOOD WORK');
+         return  getRandomWord();
+      }
+   }
+  
+   no_but.addEventListener('click', no_sprint);
+   yes_but.addEventListener('click', yes_sprint);
+
 start.addEventListener('click', timer);
- 

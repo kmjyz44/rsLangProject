@@ -710,7 +710,7 @@ left: 330px;
 }
 .words_sprint{
   border: transparent red;
-  padding-top: 100px;
+  padding-top: 30px;
  
 }
 .butoon_sprint{
@@ -758,13 +758,19 @@ color: red;
 }
 .start{
   display: block;
+  color: #1cbc11;
   margin: auto;
   padding: auto;
   text-align: center;
   text-decoration: none;
+  padding-bottom: 30px;
 }
 .start:hover{
  color: red;
   cursor: pointer;
+  
+}
+.english_word{
+  color: #2a096c;
   
 }
