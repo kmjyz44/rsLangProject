@@ -725,10 +725,10 @@ left: 330px;
   width: 200px;
   padding: 20px 5px;
   border-radius: 100%;
-  border: solid lightgreen;
+  border: solid rgb(154, 206, 154);
   border-width: thin medium thick 1em;
 
-  background: rgb(216, 237, 174);
+  background: rgb(56, 85, 140);
 }
 .butoon_sprint button:hover{
   box-sizing: 6px,6px,2px,2px, content-box;
@@ -820,5 +820,5 @@ background-position: top center;
 .badWords {
   font-size: 17px;
   color: red;
- 
+  
 }

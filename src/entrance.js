@@ -26,7 +26,7 @@ async function loginUser () {
     else{
       alert(`Добро пожаловать ${login.username.value}`)
       
-      document.location.href = "./index.html";
+      //document.location.href = "./index.html";
       let d = new Date();
       d.setTime(d.getTime()+(24*60*60*1000));
       let expires = d.toUTCString();
