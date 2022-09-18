@@ -1,6 +1,7 @@
 import {getMenu} from "./menu.js"
  getMenu();
  
+
  let words={};
  let img_sprint =[];
  var audio = new Audio();
@@ -189,7 +190,8 @@ function getLevel(){
        img_sprint =[];
        remuvWordRep();
        screen_sprint ( Math.floor(Math.random()*(27-1)+1));
-       timer ();
+       setTimeout(timer,300)
+       
    }
 }
 
@@ -210,9 +212,8 @@ Audio.prototype.stop = function() {
    }
 
    function screen_sprint (x){
-      let screen = 'url'+"("+'./img/Sprint/'+x+'.jpg'+")";
-      sprint.style.backgroundImage = (screen);
-      console.log (screen);
+    let screen =  'url'+"("+'./img/Sprint/'+x+'.jpg'+")";
+     sprint.style.backgroundImage =  (screen);
    }
 
    

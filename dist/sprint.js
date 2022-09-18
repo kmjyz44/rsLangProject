@@ -189,7 +189,7 @@ function getLevel(){
        img_sprint =[];
        remuvWordRep();
        screen_sprint ( Math.floor(Math.random()*(27-1)+1));
-       timer ();
+       setTimeout(timer,300);
    }
 }
 
