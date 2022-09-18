@@ -725,10 +725,10 @@ left: 330px;
   width: 200px;
   padding: 20px 5px;
   border-radius: 100%;
-  border: solid lightgreen;
+  border: solid rgb(154, 206, 154);
   border-width: thin medium thick 1em;
 
-  background: rgb(216, 237, 174);
+  background: rgb(56, 85, 140);
 }
 .butoon_sprint button:hover{
   box-sizing: 6px,6px,2px,2px, content-box;
@@ -777,12 +777,10 @@ color: red;
 .res_card{
   display: none;
   box-sizing: border-box;
-  
   position: absolute;
-  
   width: 1500px;
   height: 580px;
-background-image: url(./img/sprint.jpg);
+background-image: url(./img/xm.jpg);
 background-repeat: no-repeat;
 background-position: top center;
 }
@@ -807,11 +805,16 @@ background-position: top center;
   color: red;
 }
 .div_card{
-  display: block;
-  
-  margin: auto;
+  display: block;                       
+  overflow-y:scroll ;
+  width: 1000px;
+  height: 300px;
+  border: #655a8b solid 0.1em;
+  margin-top: 15px;
+  margin-left: 220px;
   padding: auto;
-  text-align: center
+  text-align: center;
+  
 }
 .res_card h1{
   font-size: 18px;
@@ -820,5 +823,19 @@ background-position: top center;
 .badWords {
   font-size: 17px;
   color: red;
- 
+  font-family: 'Arimo', sans-serif;
+  
+}
+.myAudio{
+  width: 10px;
+  height: 10%;
+}
+
+.img_word_sprint{
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  padding: auto;
 }

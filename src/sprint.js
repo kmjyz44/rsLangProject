@@ -1,13 +1,15 @@
 import {getMenu} from "./menu.js"
  getMenu();
  
+ let words={};
+ let img_sprint =[];
  var audio = new Audio();
  var audio2 = new Audio();
  let q=1;
  let n;
  let count_word =0;
  let out;
- let word_bad = [];
+ let word_bad = new Set();
  let score = 1;
  let t;
  let i;
@@ -62,6 +64,7 @@ async function getWordSprint(q,n=0){
       arrEng.push(element.word);
       arrRus.push(element.wordTranslate);
       audio_sprint.push(element.audio);
+      img_sprint.push(element.image);
    })
 })
 }
@@ -82,7 +85,7 @@ async function getWordSprint(q,n=0){
       timer_collor.style.width = count*6+'px';
    }
    else{
-      clearInterval(11);
+      clearInterval(setinter);
       sprint.style.display = 'none';
       res_card.style.display = 'block';
       score_card.innerHTML = score;
@@ -123,7 +126,7 @@ function getRandomWord(){
             book_card.style.backgroundRepeat = "no-repeat";
         },150);
          setTimeout(()=>{
-         word_bad.push(arrEng[t]);
+            word_bad.add(words = {en:arrEng[t],ru:arrRus[t],au:audio_sprint[t],im:img_sprint[t]});
          return getRandomWord();
       },100);
       }
@@ -136,7 +139,7 @@ function getRandomWord(){
             book_card.style.backgroundRepeat = "no-repeat";
          },150);
          setTimeout(()=>{
-         word_bad.push(arrEng[t]);
+         word_bad.add(words = {en:arrEng[t],ru:arrRus[t],au:audio_sprint[t],im:img_sprint[t]});
          return getRandomWord();
       },100);
       }
@@ -152,16 +155,23 @@ function getRandomWord(){
 start.addEventListener('click', timer);
 continue_sprint.addEventListener('click',getLevel);
 
+//Добавляем статистику по игре(суму очков.Слова которые не удалось угадать)
 async function word_repiat(){
-   for(let i =0; i<10; i++){ 
-      if(word_bad[i]!=undefined){
-     div_card.innerHTML += '<p class = "badWords">'
-      +(i+1)+'.'+word_bad[i]+
-       '</p>';
+   let out ='';
+   for(let i of word_bad){ 
+      if(i!==undefined){
+    out  += '<p class = "badWords">'+i.en+'---'
+      +i.ru+'</p>';
+      out += '<audio id="myAudio" class = "myAudio" controls>'+
+  '<source src="https://leng-app.herokuapp.com/'+i.au+'" type="audio/mpeg">'+
+  '</audio>' ;
+  out += '<img class = "img_word_sprint" src="https://leng-app.herokuapp.com/'+i.im+'"); alt="word"></img>';
       }
 }
+if(out !== undefined){
+div_card.innerHTML = out;
 }
-
+}
 function getLevel(){
    if(q != 20){
       q++;
@@ -172,8 +182,9 @@ function getLevel(){
        count =0;
        arrEng =[];
        arrRus=[];
-       word_bad = [];
+       word_bad.clear();
        audio_sprint=[];
+       img_sprint =[];
        remuvWordRep();
        timer ();
    }
@@ -190,8 +201,9 @@ Audio.prototype.stop = function() {
    };
 
    function remuvWordRep(){
-      console.log(div_card.firstChild);
       while(div_card.firstChild){
          div_card.removeChild(div_card.firstChild);
       }
    }
+
+   

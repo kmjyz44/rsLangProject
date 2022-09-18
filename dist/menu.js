@@ -15,7 +15,7 @@ export  function getMenu (){
   '<li class="left-item"><a href="./book.html">Учебник</a></li>'+
   '<li class="left-item"><a href="">Аудиовызов</a></li>'+
   '<li class="right-item"><a href="./sprint.html">Спринт</a></li>'+
-  '<li class="right-item"><a href="">Статистика</a></li>'+
+  '<li class="right-item"><a href="./statistic.html">Статистика</a></li>'+
   '<li class="right-item log_in"><a href="./entrance.html">'+enter+'</a></li>'+
   '<li class="right-item class = "log_out"><a href="./entrance.html">'+log_cooc+'</a></li>'    
 }
