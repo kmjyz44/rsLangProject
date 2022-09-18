@@ -683,7 +683,7 @@ h1:before
 .sprint{
   width: 1500px;
   height: 580px;
-background-image: url(./img/sprint.jpg);
+/* background-image: url(./img/sprint.jpg); */
 background-repeat: no-repeat;
 background-position: top center;
 /* background: #09c162; */

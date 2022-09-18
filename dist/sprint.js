@@ -18,6 +18,8 @@ import {getMenu} from "./menu.js"
  let arrEng=[];
  let arrRus =[];
  let count = 1;
+ let x;
+ 
  let setinter;
  const sprint_game = document.querySelector('.sprint_game');
  const audio_sp = document.querySelector(".audio_sp");
@@ -79,7 +81,7 @@ async function getWordSprint(q,n=0){
 }
 
  async function countSprint(){
-   if(count<10){
+   if(count<30){
    count++;
       timer_sprint.innerHTML=+count;
       timer_collor.style.width = count*6+'px';
@@ -186,6 +188,7 @@ function getLevel(){
        audio_sprint=[];
        img_sprint =[];
        remuvWordRep();
+       screen_sprint ( Math.floor(Math.random()*(27-1)+1));
        timer ();
    }
 }
@@ -206,4 +209,12 @@ Audio.prototype.stop = function() {
       }
    }
 
+   function screen_sprint (x){
+      let screen = 'url'+"("+'./img/Sprint/'+x+'.jpg'+")";
+      sprint.style.backgroundImage = (screen);
+      console.log (screen);
+   }
+
    
+
+   screen_sprint ( Math.floor(Math.random()*(27-1)+1));
