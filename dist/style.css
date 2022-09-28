@@ -267,7 +267,7 @@ transform: rotate(-1deg);
   color: #2a096c;
   text-decoration: none;
 }
-.wrapper_book{
+.wrapper_book, .wrapper_book_audiocall{
     display: flex;
     justify-content: space-between;
     margin-left: 6%;
@@ -275,7 +275,7 @@ transform: rotate(-1deg);
     padding: 1%;
 }
 
-.card_book{
+.card_book {
     width: 8%;
     height: 1%;
     padding: 1%;
@@ -287,12 +287,12 @@ transform: rotate(-1deg);
     
   }
   .card_book h2{
-    color: #2a096c;
+     color: #2a096c; 
     font-size: 14px;
     font-weight: bold;
   }
-  .card_book:hover{
-    
+  .card_book, .card_book_audiocall:hover{
+    /* background: #3151A2; */
     cursor: pointer;
   }
   .book_active{
@@ -495,7 +495,7 @@ transform: rotate(-1deg);
     color: #666;
     margin: 0 0 30px 0;
     letter-spacing: 4px;
-    font: normal 26px/1 Verdana, Helvetica;
+    font: normal 22px/1 Verdana, Helvetica;
     position: relative;
    padding-top: 20px;
 }
@@ -688,7 +688,7 @@ background-repeat: no-repeat;
 background-position: top center;
 /* background: #09c162; */
 }
-.sprint_game{
+.sprint_game, .sprint_game_audiocall{
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -713,7 +713,7 @@ left: 330px;
   padding-top: 30px;
  
 }
-.butoon_sprint{
+.butoon_sprint, .butoon_audiocall{
   display: flex;
   padding-top: 5px;
   width: 800px;
@@ -838,4 +838,54 @@ background-position: top center;
   height: 50%;
   margin: auto;
   padding: auto;
+}
+.audiocall{
+  background-image: url(./img/Sprint/14.jpg);
+  background-repeat:no-repeat;
+  background-position: top center;
+  box-sizing: border-box;
+  position: absolute;
+  width: 1500px;
+  height: 580px;
+}
+.audiocall h1 {
+  margin-top: 20px;
+}
+
+.words_audiocall{
+  display: block;
+  align-items: center;
+  text-align: center;
+ margin-left: 200px;
+  width: 1000px;
+  
+  
+}
+.word_audio{
+  font-size: 0.9em;
+  color: rgb(144, 19, 211);
+  margin-left: 4%;
+  
+}
+.nav_audio h1{
+  padding: 0;
+color: #05000c;
+}
+.word_audio:hover{
+padding: 2%;
+cursor: pointer;
+transform: matrix3d(20);
+}
+.start_audiocall:hover{
+  color: #09c162;
+  cursor: pointer;
+transform: matrix3d(20);
+}
+
+.nav_audio{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 6%;
+    margin-right: 6%;
+    padding: 1%;
 }

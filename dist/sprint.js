@@ -1,6 +1,7 @@
 import {getMenu} from "./menu.js"
  getMenu();
  
+
  let words={};
  let img_sprint =[];
  var audio = new Audio();
@@ -13,9 +14,8 @@ import {getMenu} from "./menu.js"
  let score = 1;
  let t;
  let i;
- let boolen;
  let audio_sprint = [];
- let arrEng=[];
+ export let arrEng=[];
  let arrRus =[];
  let count = 1;
  let x;
@@ -43,7 +43,10 @@ import {getMenu} from "./menu.js"
  const timer_sprint = document.querySelector('.timer_sprint');
  const wrapper_book = document.querySelector('.wrapper_book');
  const card_book = document.querySelectorAll('.card_book');
- wrapper_book.addEventListener('click',function (event)  {
+ 
+
+
+   wrapper_book.addEventListener('click',function (event)  {
     event.stopPropagation(true);
     n= event.target.getAttribute('data');
     card_book.forEach(element => {
@@ -54,9 +57,11 @@ import {getMenu} from "./menu.js"
     event.target.classList.add('book_active');
      }
   })
+
+
   level_sp.innerHTML=q;
 
-async function getWordSprint(q,n=0){
+  async function getWordSprint(q,n=0){
   await fetch('https://leng-app.herokuapp.com/words?page= '+q+'&group='+n+'')
    .then((data) => {
      return data.json();
@@ -70,6 +75,7 @@ async function getWordSprint(q,n=0){
    })
 })
 }
+
   async function timer (){
    await getWordSprint(q,n);
    getRandomWord();
@@ -189,7 +195,8 @@ function getLevel(){
        img_sprint =[];
        remuvWordRep();
        screen_sprint ( Math.floor(Math.random()*(27-1)+1));
-       setTimeout(timer,300);
+       setTimeout(timer,300)
+       
    }
 }
 
@@ -210,11 +217,10 @@ Audio.prototype.stop = function() {
    }
 
    function screen_sprint (x){
-      let screen = 'url'+"("+'./img/Sprint/'+x+'.jpg'+")";
-      sprint.style.backgroundImage = (screen);
-      console.log (screen);
+    let screen =  'url'+"("+'./img/Sprint/'+x+'.jpg'+")";
+    sprint.style.backgroundImage = (screen);
    }
 
-   
-
    screen_sprint ( Math.floor(Math.random()*(27-1)+1));
+
+   

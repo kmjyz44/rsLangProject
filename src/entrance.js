@@ -82,7 +82,7 @@ async function loginUser () {
     });
     const content = await rawResponse.json();
   
-    console.log(content);
+   // console.log(content);
   };
   
  login.submit_log.addEventListener('click', loginUser);
